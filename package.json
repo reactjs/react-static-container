@@ -1,0 +1,47 @@
+{
+  "name": "react-static-container",
+  "version": "1.0.0",
+  "description": "Renders static content efficiently by allowing React to short-circuit the reconciliation process.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir=lib --ignore='**/__tests__/**'",
+    "prerelease": "npm run build",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reactjs/react-static-container"
+  },
+  "keywords": [
+    "react-component"
+  ],
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/reactjs/react-static-container/issues"
+  },
+  "homepage": "https://github.com/reactjs/react-static-container",
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "modulePathIgnorePatterns": [
+      "/lib/",
+      "/node_modules/"
+    ],
+    "unmockedModulePathPatterns": [
+      "/node_modules/"
+    ],
+    "testPathDirs": [
+      "<rootDir>/src"
+    ]
+  },
+  "devDependencies": {
+    "babel": "^5.4.7",
+    "babel-jest": "^5.2.0",
+    "jest-cli": "^0.4.5",
+    "react": "^0.13.0"
+  },
+  "peerDependencies": {
+    "react": "^0.13.0"
+  }
+}
