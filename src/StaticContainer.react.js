@@ -11,7 +11,7 @@
  * @flow
  */
 
-var React = require('react');
+var React = require('React');
 
 /**
  * Renders static content efficiently by allowing React to short-circuit the
@@ -36,12 +36,12 @@ class StaticContainer extends React.Component {
 
   render() {
     var child = this.props.children;
-    return child === null || child === false
-      ? null
-      : React.Children.only(child);
+    if (child === null || child === false) {
+      return null;
+    }
+    return React.Children.only(child);
   }
 
 }
 
 module.exports = StaticContainer;
-
