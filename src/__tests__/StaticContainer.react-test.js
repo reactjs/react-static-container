@@ -9,7 +9,7 @@
  * @emails react-core
  */
 
-jest.dontMock('../react-static-container');
+jest.dontMock('../StaticContainer.react');
 
 describe('StaticContainer', () => {
   var React;
@@ -21,7 +21,7 @@ describe('StaticContainer', () => {
     jest.resetModuleRegistry();
 
     React = require('react');
-    StaticContainer = require('../react-static-container');
+    StaticContainer = require('../StaticContainer.react');
 
     container = document.createElement('div');
   });
