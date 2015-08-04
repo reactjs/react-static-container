@@ -1,16 +1,13 @@
 {
   "name": "react-static-container",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "description": "Renders static content efficiently by allowing React to short-circuit the reconciliation process.",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test jest",
     "prerelease": "gulp build"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/reactjs/react-static-container"
-  },
+  "repository": "reactjs/react-static-container",
   "keywords": [
     "react-component"
   ],
