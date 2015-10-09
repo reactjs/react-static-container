@@ -4,8 +4,8 @@ var gulp = require('gulp');
 var babel = require('gulp-babel');
 var del = require('del');
 var runSequence = require('run-sequence');
-var babelPluginDEV = require('fbjs/scripts/babel/dev-expression');
-var babelPluginModules = require('fbjs/scripts/babel/rewrite-modules');
+var babelPluginDEV = require('fbjs-scripts/babel/dev-expression');
+var babelPluginModules = require('fbjs-scripts/babel/rewrite-modules');
 
 var paths = {
   lib: 'lib',

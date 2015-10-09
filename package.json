@@ -31,15 +31,17 @@
     ]
   },
   "devDependencies": {
-    "babel": "^5.8.19",
+    "babel": "^5.8.23",
     "del": "^1.2.0",
-    "fbjs": "^0.1.0-alpha.4",
+    "fbjs": "^0.3.1",
+    "fbjs-scripts": "^0.2.2",
     "gulp": "^3.9.0",
-    "gulp-babel": "^5.2.0",
-    "jest-cli": "^0.4.17",
-    "object-assign": "^3.0.0",
-    "react": "^0.13.0",
-    "run-sequence": "^1.1.2"
+    "gulp-babel": "^5.2.1",
+    "jest-cli": "^0.5.10",
+    "object-assign": "^4.0.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "run-sequence": "^1.1.4"
   },
   "peerDependencies": {
     "react": "^0.13.0 || ^0.14.0-beta1"

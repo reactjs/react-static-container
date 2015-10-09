@@ -1,7 +1,7 @@
 'use strict';
 
 var babel = require('babel');
-var babelPluginModules = require('fbjs/scripts/babel/rewrite-modules');
+var babelPluginModules = require('fbjs-scripts/babel/rewrite-modules');
 var objectAssign = require('object-assign');
 
 var babelOpts = {
