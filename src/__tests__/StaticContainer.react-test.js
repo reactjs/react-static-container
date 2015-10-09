@@ -11,17 +11,15 @@
 
 jest.dontMock('StaticContainer.react');
 
-describe('StaticContainer', () => {
-  var React;
-  var StaticContainer;
+var React = require('React');
+var ReactDOM = require('ReactDOM');
+var StaticContainer = require('StaticContainer.react');
 
+describe('StaticContainer', () => {
   var container;
 
   beforeEach(() => {
     jest.resetModuleRegistry();
-
-    React = require('React');
-    StaticContainer = require('StaticContainer.react');
 
     container = document.createElement('div');
   });
@@ -30,18 +28,18 @@ describe('StaticContainer', () => {
     var mockRender = jest.genMockFunction().mockReturnValue(<div />);
     var MyComponent = React.createClass({render: mockRender});
 
-    React.render(<StaticContainer><MyComponent /></StaticContainer>, container);
+    ReactDOM.render(<StaticContainer><MyComponent /></StaticContainer>, container);
 
     expect(mockRender.mock.calls.length).toBe(1);
 
-    React.render(<StaticContainer><MyComponent /></StaticContainer>, container);
+    ReactDOM.render(<StaticContainer><MyComponent /></StaticContainer>, container);
 
     expect(mockRender.mock.calls.length).toBe(1);
   });
 
   it('allows null children', () => {
     expect(() => {
-      React.render(
+      ReactDOM.render(
         <StaticContainer>{null}</StaticContainer>,
         container
       );
@@ -50,14 +48,14 @@ describe('StaticContainer', () => {
 
   it('requires exactly one child', () => {
     expect(() => {
-      React.render(<StaticContainer />, container);
+      ReactDOM.render(<StaticContainer />, container);
     }).toThrow(
       'Invariant Violation: ' +
       'onlyChild must be passed a children with exactly one child.'
     );
 
     expect(() => {
-      React.render(<StaticContainer><a /><a /></StaticContainer>, container);
+      ReactDOM.render(<StaticContainer><a /><a /></StaticContainer>, container);
     }).toThrow(
       'Invariant Violation: ' +
       'onlyChild must be passed a children with exactly one child.'

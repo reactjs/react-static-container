@@ -10,6 +10,7 @@ var babelOpts = {
   plugins: [babelPluginModules],
   _moduleMap: {
     'React': 'react',
+    'ReactDOM': 'react-dom',
   }
 };
 
