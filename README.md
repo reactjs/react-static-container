@@ -7,20 +7,20 @@ subtree of components will never need to be updated.
 Typically, you will not need to use this component and should opt for normal
 React reconciliation.
 
-
 ## Installation
 
 ```sh
 npm install react-static-container
+# or
+yarn add react-static-container
 ```
 
 ## Usage
 
 ```js
+const StaticContainer = require('react-static-container');
 
-var StaticContainer = require('react-static-container');
-
-var someValue = ...; // We know for certain this value will never change.
+const someValue = ...; // We know for certain this value will never change.
 
 class MyComponent extends React.Component {
   render() {
