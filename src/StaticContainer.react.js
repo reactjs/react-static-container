@@ -39,7 +39,7 @@ class StaticContainer extends React.Component {
     if (child === null || child === false) {
       return null;
     }
-    return React.Children.only(child);
+    return child;
   }
 
 }
